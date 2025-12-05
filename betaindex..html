@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Beta Access</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding: 100px;
+        background-color: #f9f9f9;
+      }
+      input {
+        padding: 10px;
+        font-size: 16px;
+        margin-top: 20px;
+      }
+      button {
+        padding: 10px 20px;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Privat testversion</h2>
+    <p>Skriv lösenordet för att komma in.</p>
+    <input type="password" id="password" placeholder="Lösenord" />
+    <br />
+    <button onclick="checkPassword()">Fortsätt</button>
+
+    <script>
+      function checkPassword() {
+        const input = document.getElementById("password").value;
+        const correct = "fami2025"; // byt till ditt egna lösenord
+        if (input === correct) {
+          window.location.href = "mvp.html"; // din riktiga MVP-fil
+        } else {
+          alert("Fel lösenord. Försök igen.");
+        }
+      }
+    </script>
+  </body>
+</html>
